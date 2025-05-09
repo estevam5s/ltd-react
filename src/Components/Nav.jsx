@@ -8,6 +8,7 @@ import Contact from "../Components/Contact";
 import Technologies from "../Components/Technologies";
 import WeAre from "../Components/WeAre";
 import CyberSec from "../Components/CyberSec";
+import Noticias from "../Components/Noticias"; // Importação adicionada aqui
 import { FaRegTimesCircle } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
 
@@ -36,7 +37,10 @@ function Nav() {
                 return <WeAre />;
             case 'CyberSec':
                 return <CyberSec />;
-
+            case 'Noticias':
+                return <Noticias />;
+            default:
+                return <Home />;
         }
     };
 
@@ -60,7 +64,7 @@ function Nav() {
                       text-lg mt-4 md:mt-2 transition-all duration-300
                       ${menu ? 'block' : 'hidden'} md:flex
                 `}>
-                    {['Home', 'Sobre', 'Quem Somos', 'Apps', 'CyberSec', 'Tecnologias', 'Contato'].map((page) => (
+                    {['Home', 'Sobre', 'Quem Somos', 'Apps', 'CyberSec', 'Tecnologias', 'Contato', 'Noticias'].map((page) => (
                         <li key={page} onClick={() => handleChange(page)} className="group relative px-4 py-2 cursor-pointer transition-all duration-300 hover:text-green-400 hover:bg-white/20  hover:rounded-lg group-hover:translate-x-1">
                             <span className="relative">
 
